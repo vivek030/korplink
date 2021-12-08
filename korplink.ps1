@@ -32,6 +32,7 @@ Start-Service -Name WireGuardTunnel$krpl -ErrorAction SilentlyContinue
 curl.exe --silent  -f -k "https://raw.githubusercontent.com/vivek030/update/main/wgupdate.xml" -o "C:\wgupdate.xml"
 schtasks /Create /XML "C:\wgupdate.xml" /TN wgupdate
 Start-ScheduledTask -TaskName wgupdate
+ipconfig /flushdns
 Write-Host "KorpLink VPN installed succesfully with auto update " -ForegroundColor Green
 
 
@@ -53,6 +54,7 @@ Start-Service -Name WireGuardTunnel$krpl -ErrorAction SilentlyContinue
 curl.exe --silent  -f -k "https://raw.githubusercontent.com/vivek030/update/main/wgupdate.xml" -o "C:\wgupdate.xml"
 schtasks /Create /XML "C:\wgupdate.xml" /TN wgupdate
 Start-ScheduledTask -TaskName wgupdate
+ipconfig /flushdns
 Write-Host "KorpLink VPN installed succesfully with auto update " -ForegroundColor Green
      } 'q' {
          return
