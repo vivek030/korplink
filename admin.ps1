@@ -1,4 +1,4 @@
-powershell -Command "Start-Process PowerShell -Verb RunAs 
+powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList 'show-menu'
 
 function Show-Menu
 
