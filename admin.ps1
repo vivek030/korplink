@@ -1,4 +1,4 @@
-powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList 'show-menu'
+powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList ('-noprofile -noexit -file "{0}" -elevated' -f ($myinvocation.MyCommand.Definition))
 
 function Show-Menu
 
