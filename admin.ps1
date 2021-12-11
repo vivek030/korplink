@@ -2,7 +2,6 @@ $currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Princi
 $testadmin = $currentUser.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
 if ($testadmin -eq $false) {
 Start-Process powershell.exe -Verb RunAs -ArgumentList ('-noprofile -noexit -file "{0}" -elevated' -f ($myinvocation.MyCommand.Definition))
-show-menu
 exit $LASTEXITCODE
 }
 
@@ -70,7 +69,7 @@ Write-Host "KorpLink VPN installed succesfully with auto update " -ForegroundCol
 
 }
 
-#show-menu
+show-menu
 
 
 
