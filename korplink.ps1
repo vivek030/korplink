@@ -8,14 +8,13 @@ function Show-Menu
     Clear-Host
     Write-Host "================ $Title ================"
  
-    Write-Host "Press 1 for Default users."
-    Write-Host "Press 2 for Management users."
+    Write-Host "Press 1 for KorpLink Installation."
     Write-Host "Press Q to quit."
  $selection = Read-Host "Please make a selection"
  switch ($selection)
  {
      '1' {
-         $dns = "45.90.28.58,2a07:a8c0::e9:59cb"
+         $dns = "10.6.6.1"
 Do {$email = Read-Host 'Enter Email ID'} while ([string]::IsNullOrWhiteSpace($email))
 Do {$id = Read-Host 'Enter Friendly Name'} while ([string]::IsNullOrWhiteSpace($id))
 $hostname = hostname
